@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta  charset="UTF-8">
+    <title>Hlooo </title>
+    <style>
+    body{
+        background-color: slategray;
+        text-align: center;
+    }
+    p{
+        color: aliceblue;
+        font-family: Shanti;
+        font-size: 2em;
+        margin: 20px;
+    }
+    img{
+        margin: 60px 0 30px 0;
+        width: 250px;
+    }
+    input{
+        width: 300px;
+        height: 50px;
+        margin: 20px;
+        border: none;
+        border-radius: 10px;
+        font-family: Shanti;
+        text-align: center;
+        font-size: 2.5em;
+    }
+    #greet{
+        background-color: palevioletred;
+        color: blanchedalmond;
+        width: 200px;
+    }
+    #greet{
+        background-color: mediumvioletred;
+        cursor: pointer;
+    }
+    input:focus{
+        border:solid 5px #00FFCE;
+        outline: none;
+    }
+    </style>
+</head>
+<body>
+    <img src="https://raw.githubusercontent.com/MariyaSha/SimpleGreetingApp/main/logo.png">
+    <br>
+    <form action="greet" method="post">
+        {%for message in get_flashed_messages()%}
+        <p>{{message}}</p>
+        {% endfor %}
+        <br>
+        <input type="text" name="name_input">
+        <br>
+        <input type="submit" value="GREET" id="greet">
+    </form>
+    
+</body>
+
+
+
+
+
+</html>
